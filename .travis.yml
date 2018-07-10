@@ -37,9 +37,6 @@ script:
   - make
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 . 
-  # Get code coverage
-  - ./get_code_cov > /dev/null
-  - codecov > /dev/null
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

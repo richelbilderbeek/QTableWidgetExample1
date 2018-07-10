@@ -19,12 +19,13 @@ QtDialog::QtDialog(QWidget *parent) :
   {
     for (int y=0; y!=n_rows; ++y)
     {
-      const std::string s = "("
-        + boost::lexical_cast<std::string>(x)
+      const QString s = "("
+        + QString::number(x)
         + ","
-        + boost::lexical_cast<std::string>(y)
-        + ")";
-      QTableWidgetItem * const i = new QTableWidgetItem(QString(s.c_str()));
+        + QString::number(y)
+        + ")"
+      ;
+      QTableWidgetItem * const i = new QTableWidgetItem(s);
       t->setItem(y, x, i);
     }
   }
@@ -33,16 +34,4 @@ QtDialog::QtDialog(QWidget *parent) :
 QtDialog::~QtDialog()
 {
   delete ui;
-}
-
-void QtDialog::changeEvent(QEvent *e)
-{
-  QDialog::changeEvent(e);
-  switch (e->type()) {
-  case QEvent::LanguageChange:
-    ui->retranslateUi(this);
-    break;
-  default:
-    break;
-  }
 }

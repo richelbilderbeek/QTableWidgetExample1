@@ -1,9 +1,4 @@
 #include "qtdialog.h"
-
-#include <string>
-
-#include <boost/lexical_cast.hpp>
-
 #include "ui_qtdialog.h"
 
 QtDialog::QtDialog(QWidget *parent) :

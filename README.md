@@ -7,4 +7,4 @@ develop|[![Build Status](https://travis-ci.org/richelbilderbeek/QTableWidgetExam
 
 QTableWidget example 1.
 
-![](CppQTableWidgetExample1.png)
+![](QTableWidgetExample1.png)
